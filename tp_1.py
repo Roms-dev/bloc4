@@ -16,8 +16,8 @@ print(algod_client.block_info(0))
 print(indexer_client.health())
 
 # création des comptes
-alice = account_creation(algorand, "ALICE", au.AlgoAmount(algo=1))
-bob = account_creation(algorand, "BOB", au.AlgoAmount(algo=1))
+alice = account_creation(algorand, "ALICE", au.AlgoAmount(algo=10_000))
+bob = account_creation(algorand, "BOB", au.AlgoAmount(algo=1000))
 
 # création paiement alice vers bob
 pay_txn = algorand.create_transaction.payment(
